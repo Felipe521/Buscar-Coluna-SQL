@@ -1,3 +1,20 @@
+
+-------------Postgres-------------
 SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE COLUMN_NAME = 'nome_da_coluna';
+
+
+-----------Oracle-------------
+SELECT
+    OWNER,
+    TABLE_NAME,
+    COLUMN_NAME
+FROM
+    ALL_TAB_COLUMNS
+WHERE
+    OWNER = 'SENIOR'
+    AND COLUMN_NAME = 'CODSIT'
+ORDER BY
+    TABLE_NAME;
+
